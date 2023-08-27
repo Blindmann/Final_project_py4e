@@ -29,8 +29,13 @@ while True:
 
     print (r.status_code)
     print (r.headers['content-type'])
+    print ("Expires", r.headers['expires'])
+    print ("Last modified", r.headers['last-modified'])
     
     result = r.text
     
     js = json.loads(result)
-    print(json.dumps(js, indent=4)) #:print the json
+    #print(json.dumps(js, indent=4)) #:print the json
+    
+    
+    

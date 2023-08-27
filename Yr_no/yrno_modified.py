@@ -26,7 +26,10 @@ while True:
     headers = {'user-agent': sitename}
 
     r = requests.get(url, headers=headers)
-
+    
+    if r.status_code != 200 :
+        print("Error code=", r.status_code, url)
+        break
     print (r.status_code)
     print (r.headers['content-type'])
     print ("Expires", r.headers['expires'])

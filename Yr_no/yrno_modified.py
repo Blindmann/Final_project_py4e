@@ -46,18 +46,18 @@ while True:
     time = list()
     for x in js["properties"]["timeseries"][0:55]:
         time.append(x["time"])
-    print(time)
+    #print(time)
     temperature = list()
     for y in js["properties"]["timeseries"][0:55]:
         temperature.append(y["data"]["instant"]["details"]["air_temperature"])
-    print(temperature)
+    #print(temperature)
     precipitation = list()
     for p in js["properties"]["timeseries"][0:55]:
         precipitation.append(p["data"]["next_1_hours"]["details"]["precipitation_amount"])
-    print(precipitation)
+    #print(precipitation)
     
     weather = [{'time':tim, 'temperature': temp, 'precipitation': precip}
         for tim, temp, precip in zip(time, temperature, precipitation)
        ]
     
-    print(weather)
+    #print(weather)

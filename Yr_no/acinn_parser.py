@@ -3,7 +3,21 @@
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 import ssl
+import sqlite3
 import re
+
+conn = sqlite3.connect('weatherstations.sqlite')
+cur = conn.cursor()
+
+cur.executescript('''
+
+CREATE TABLE IF NOT EXISTS Stations (
+    id     INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    Name   TEXT UNIQUE,
+    Lat    FLOAT,
+    Long   FLOAT
+)
+''')
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
@@ -28,7 +42,7 @@ tags = eurolines('a')
 links = list()
 for tag in tags:
     s = tag.get('href')
-    if s == "http://www.zamg.ac.at":
+    if s == "http://www.zamg.ac.at" or s == "../pages/hatpro-uibk-met.html" or s == "../pages/patscherkofel-1.html" or s == "../pages/patscherkofel-2.html" or s == "../pages/patscherkofel-3.html" or s == "../pages/tawes-uibk.html" or s == "../pages/i-box-arbeserkogel.html" or s == "../pages/i-box-eggen.html" or s == "../pages/i-box-hochhaeuser.html" or s == "../pages/i-box-kolsass.html" or s == "../pages/i-box-terfens.html" or s == "../pages/i-box-turbibox.html" or s == "../pages/i-box-weerberg.html":
         continue
     links.append(s[2:])
 howmany = len(links)
@@ -49,20 +63,39 @@ for link in links:
     try:
         lat_tags = soup.find('dl', class_="docutils").find('dt', string='Latitude:')
         latitude = lat_tags.find_next_sibling('dd').string
-        lat.append(latitude)
+        lat.append(latitude[:5])
     except:
         print("doesn't apply to this page", link)
 
     try:
         long_tags = soup.find('dl', class_="docutils").find('dt', string='Longitude:')
         longitude = long_tags.find_next_sibling('dd').string
-        lng.append(longitude)
+        lng.append(longitude[:5])
     except:
         print("doesn't apply to this page", link)
     #for tag in tags:
         #newtag = tag.contents[0]
     #lat.append(newtag)
     #print("===============================")
-print(st)
-print(lat)
-print(lng)
+    
+stations = [{'name':nam, 'latitude': lat, 'longitude': lng}
+    for nam, lat, lng in zip(st, lat, lng)
+    ]
+
+# [ 
+#   { 'name': 'Ellboegen', 'latitude': '47.1874777175', 'longitude': '11.4293137193' }, 
+#   { 'name': 'Hintereisferner', 'latitude': '46.805769', 'longitude': '10.774416' },
+
+for entry in stations:
+
+    name = entry['name']
+    latitude = entry['latitude']
+    longitude = entry['longitude']
+
+    print((name, latitude, longitude))
+    
+    cur.execute('''INSERT OR REPLACE INTO Stations
+        (Name, Lat, Long) VALUES ( ?, ? , ? )''',
+        ( name, latitude, longitude ) )
+    
+    conn.commit()

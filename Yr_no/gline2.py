@@ -49,7 +49,7 @@ for (forecast_id, forecast) in list(forecasts.items()):
     name = forecast[0]
     pieces = names[name]
     time = forecast[3]
-    temperature = forecast[1]
+    temperature = int(forecast[1])
     precipitation = forecast[2]
     if time not in times : times.append(time)
     key = (time, pieces)
@@ -58,27 +58,36 @@ for (forecast_id, forecast) in list(forecasts.items()):
 
 times.sort()
 
-# pick the weather forecasts (temperature, precipitation) for each date and time
+s = 0
+avgdic = dict()
+countdic = dict()
 
+for k, v in TEMP.items():
+    avgdic[k[0]] = avgdic.get(k[0], 0) + v
+    countdic[k[0]] = countdic.get(k[0], 0) + 1
+#print(totdic, countdic)
 
-            
+for k, v in avgdic.items():
+    avgdic[k] /= countdic[k]
     
-print (TEMP)
-print (PREC)
+print(avgdic)
+#print (TEMP)
+#print (PREC)
 #print (times)
 
 fhand = open('gline.js','w')
 fhand.write("gline = [ ['Times'")
-for w in w_stat:
-    fhand.write(",'"+w+"'")
+fhand.write(", 'average station'")
+#for w in w_stat:
+    #fhand.write(",'"+w+"'")
 fhand.write("]")
 
 for time in times:
     fhand.write(",\n['"+time+"'")
-    for w in w_stat:
-        key = (time, w)
-        val = TEMP.get(key,0)
-        fhand.write(","+str(val))
+    #for w in w_stat:
+    key = (time)
+    val = avgdic.get(key,0)
+    fhand.write(","+str(val))
     fhand.write("]");
 
 fhand.write("\n];\n")

@@ -78,11 +78,11 @@ while count < maxid :
         #print(time)
         #
         for y in js["properties"]["timeseries"][0:55]:
-            temperature.append(int(y["data"]["instant"]["details"]["air_temperature"]))
+            temperature.append(y["data"]["instant"]["details"]["air_temperature"])
         #print(temperature)
         #
         for p in js["properties"]["timeseries"][0:55]:
-            precipitation.append(int(p["data"]["next_1_hours"]["details"]["precipitation_amount"]))
+            precipitation.append(p["data"]["next_1_hours"]["details"]["precipitation_amount"])
         #print(precipitation)
     
         weather = [{'station_id': sta, 'time':tim, 'temperature': temp, 'precipitation': precip}

@@ -1,8 +1,8 @@
 # Final_project_py4e
 This is the repository for my final project of Python 4 Everybody course on Coursera (Capstone).
 
-In the nominatim folder, I used two API from Open street map, the search API gives the latitude and longitude for a given address, while the search allows to find the address for a given latitude and longitude.
-This Nomanatim folder could be useful if chosing another data source than me.
+In the Nominatim folder, I used two APIs from Open street map, the search API gives the latitude and longitude for a given address, while the search API allows to find the address for a given latitude and longitude.
+This Nominatim folder could be useful if chosing another data source than me.
 
 In the Yr_no can be found my final project, where I first used the acinn_parser.py program in order to parse the website of the department of Atmospheric and Cryospheric Sciences at the University of Innsbruck in order to retrieve data about several weather stations accessible at different webpages. For the pages that were formatted in same way, I could retrieve (in Europe) the latitude and longitude of the weather station (open source data). I then went on and used the second program yrno_modified.py in order to use these retrieved lat. long. values for the weather stations and to predict the weather at these locations. Both the parser and the yrno_modified.py program use the same SQLite3 database that they contribute on building (the yrno_modified.py program adds a table to the weatherstations.sqlite database in order to save the forecast data).
 

@@ -31,7 +31,7 @@ This set of programs could be used to predict weather anywhere on the planet and
 
   * If parsing a website and interested about weather forecast for other locations, don't hesitate to contribute and create another parser program. 
 
-  * Include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program in order to save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim program in combination with the parser for the newly retrieved locations. 
+  * Include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program in order to save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use this Nominatim program described above in combination with the parser for the newly retrieved locations. 
 
 ### More informations to help choose locations with this particular combination of APIs ###
 

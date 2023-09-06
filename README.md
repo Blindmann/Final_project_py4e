@@ -22,7 +22,7 @@ If you would like to test this program (and to understand my thought process), t
 
 If parsing a website and interested about weather forecast for other locations, don't hesitate to contribute and create another parser program. 
 
-IF possible include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program and save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim parser for the newly retrieved locations. 
+IF possible include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program and save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim program for the newly retrieved locations. 
 
 The idea with using already known weather stations with free access data is to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break. The Norwegian Meteorological Institute is known to use trustful algorithm to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. 
 

@@ -35,7 +35,7 @@ This set of programs could be used to predict weather anywhere on the planet and
 
 ### More informations to select locations with this particular set of APIs ###
 
-   * Using already known weather stations with free access data allow to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break.
+   * Using already known weather stations with free access data allow to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for more accurate interpolations if weather instruments break.
    * The [Norwegian Meteorological Institute](https://www.yr.no/en) is known to use trustful algorithms to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. [Open street map](https://www.openstreetmap.org/) has a set of different APIs that are available and can be modified as well, in order to find more information about retrieved locations and to make them compatible with the LocationForecast API of the Norwegian Meteorological Institute (which uses lat long). 
 
 ## Visualization #

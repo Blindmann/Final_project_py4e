@@ -6,14 +6,14 @@ This set of programs could be used to predict weather anywhere on the planet and
 
 ## Folder structure #
 
-- In the **Nominatim folder**, I used _two APIs_ from Open street map:
+- In the **Nominatim** folder, I used _two APIs_ from Open street map:
 
-  * the [search API](https://nominatim.org/release-docs/latest/api/Search/) gives the latitude and longitude for a given address,
-  * the [reverse API](https://nominatim.org/release-docs/latest/api/Reverse/) allows to find the address for a given latitude and longitude.
+  * the [search API](https://nominatim.org/release-docs/latest/api/Search/) gives the latitude and longitude for a given address (_Nominatim_search.py_),
+  * the [reverse API](https://nominatim.org/release-docs/latest/api/Reverse/) allows to find the address for a given latitude and longitude(_Nominatim_reverse.py_).
   
   > *This Nominatim folder could be useful if chosing another data source than me.*
 
-- In the **Yr_no folder** can be found the main content of my final project, where I **first** used the _acinn_parser.py_ program in order to parse the [website of the department of Atmospheric and Cryospheric Sciences](https://acinn-data.uibk.ac.at/) at the University of Innsbruck. That way, I could retrieve data about several weather stations accessible at different webpages from the source url. For the pages that were formatted in the same way, I could retrieve (for Europe) the latitude and longitude of the weather station (open source data). I then went on and used the **second** program _yrno_modified.py_ in order to use these retrieved lat long values for the weather stations and to predict the weather at these locations (using the [LocationForecast API](https://developer.yr.no/doc/locationforecast/HowTO/) of Yr.no). Both the parser and the yrno_modified.py program use the same **_SQLite3 database_** that they contribute on building (the yrno_modified.py program adds a table to the **weatherstations.sqlite database** in order to save the forecast data).
+- In the **Yr_no** folder can be found the main content of my final project, where I **first** used the _acinn_parser.py_ program in order to parse the [website of the department of Atmospheric and Cryospheric Sciences](https://acinn-data.uibk.ac.at/) at the University of Innsbruck. That way, I could retrieve data about several weather stations accessible at different webpages from the source url. For the pages that were formatted in the same way, I could retrieve (for Europe) the latitude and longitude of the weather station (open source data). I then went on and used the **second** program _yrno_modified.py_ in order to use these retrieved lat long values for the weather stations and to predict the weather at these locations (using the [LocationForecast API](https://developer.yr.no/doc/locationforecast/HowTO/) of Yr.no). Both the parser and the yrno_modified.py program use the same **_SQLite3 database_** that they contribute on building (the yrno_modified.py program adds a table to the **weatherstations.sqlite database** in order to save the forecast data).
 
 
 ## Additional informations for practical use #

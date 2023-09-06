@@ -28,7 +28,7 @@ This set of programs could be used to predict weather anywhere on the planet and
 
   * Include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program in order to save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim program in combination with the parser for the newly retrieved locations. 
 
-### More informations to help you choose locations with the particular combination of APIs ###
+### More informations to help choose locations with this particular combination of APIs ###
 
   * The idea with using already known weather stations with free access data could be to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break. The [Norwegian Meteorological Institute](https://www.yr.no/en) is known to use trustful algorithms to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. [Open street map](https://www.openstreetmap.org/) has a set of different APIs that are available and can be modified as well, in order to find more information about retrieved locations and to make them compatible with the LocationForecast API of the Norwegian Meteorological Institute (which uses lat long). 
 

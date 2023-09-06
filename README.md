@@ -20,7 +20,8 @@ This set of programs could be used to predict weather anywhere on the planet and
 
 ### Simple workflow without storing the data in a SQLite3 database ###
 
-  * If you would like to test this program (and to understand my thought process), then I would recommend to first use the Nominatim search API in order to retrieve the lat and long for an address that interests you. Then I would go on and use the yrno.py unmodified simple program to predict the weather for this location: user is prompted for lat and long and then provided with an output as a json file for this location.
+  1) If you would like to test this program (and to understand my thought process), then I would recommend to first use the _Nominatim_search.py_ in order to retrieve the lat and long for an address that interests you.
+  2) Then I would go on and use the _yrno.py_ unmodified simple program to predict the weather for this location: user is prompted for lat and long and then provided with an output as a json file for this location.
 
 ### Add your own locations of interest ###
 

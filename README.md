@@ -9,7 +9,7 @@ This set of programs could be used to predict weather anywhere on the planet and
 - In the **Nominatim** folder, I used _two APIs_ from Open street map:
 
   * the [search API](https://nominatim.org/release-docs/latest/api/Search/) gives the latitude and longitude for a given address (_Nominatim_search.py_),
-  * the [reverse API](https://nominatim.org/release-docs/latest/api/Reverse/) allows to find the address for a given latitude and longitude(_Nominatim_reverse.py_).
+  * the [reverse API](https://nominatim.org/release-docs/latest/api/Reverse/) allows to find the address for a given latitude and longitude (_Nominatim_reverse.py_).
   
   > *This Nominatim folder could be useful if chosing another data source than me.*
 

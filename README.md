@@ -1,19 +1,19 @@
 # Final project py4e: Python for Everybody (Capstone)
 
+This is the repository for my final project of [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
+
 This set of programs could be used to predict weather anywhere on the planet and save this forecast for analysis, much like a weather station would do. 
 
 ## Folder structure #
 
-This is the repository for my final project of [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
+- In the **Nominatim folder**, I used _two APIs_ from Open street map:
 
-In the **Nominatim folder**, I used _two APIs_ from Open street map:
-
-* the [search API](https://nominatim.org/release-docs/latest/api/Search/) gives the latitude and longitude for a given address,
-* the [reverse API](https://nominatim.org/release-docs/latest/api/Reverse/) allows to find the address for a given latitude and longitude.
+  * the [search API](https://nominatim.org/release-docs/latest/api/Search/) gives the latitude and longitude for a given address,
+  * the [reverse API](https://nominatim.org/release-docs/latest/api/Reverse/) allows to find the address for a given latitude and longitude.
   
-*This Nominatim folder could be useful if chosing another data source than me.*
+  > *This Nominatim folder could be useful if chosing another data source than me.*
 
-In the **Yr_no folder** can be found the main content of my final project, where I **first** used the _acinn_parser.py_ program in order to parse the [website of the department of Atmospheric and Cryospheric Sciences](https://acinn-data.uibk.ac.at/) at the University of Innsbruck. That way, I could retrieve data about several weather stations accessible at different webpages from the source url. For the pages that were formatted in the same way, I could retrieve (for Europe) the latitude and longitude of the weather station (open source data). I then went on and used the **second** program _yrno_modified.py_ in order to use these retrieved lat long values for the weather stations and to predict the weather at these locations (using the [LocationForecast API](https://developer.yr.no/doc/locationforecast/HowTO/) of Yr.no). Both the parser and the yrno_modified.py program use the same **_SQLite3 database_** that they contribute on building (the yrno_modified.py program adds a table to the **weatherstations.sqlite database** in order to save the forecast data).
+- In the **Yr_no folder** can be found the main content of my final project, where I **first** used the _acinn_parser.py_ program in order to parse the [website of the department of Atmospheric and Cryospheric Sciences](https://acinn-data.uibk.ac.at/) at the University of Innsbruck. That way, I could retrieve data about several weather stations accessible at different webpages from the source url. For the pages that were formatted in the same way, I could retrieve (for Europe) the latitude and longitude of the weather station (open source data). I then went on and used the **second** program _yrno_modified.py_ in order to use these retrieved lat long values for the weather stations and to predict the weather at these locations (using the [LocationForecast API](https://developer.yr.no/doc/locationforecast/HowTO/) of Yr.no). Both the parser and the yrno_modified.py program use the same **_SQLite3 database_** that they contribute on building (the yrno_modified.py program adds a table to the **weatherstations.sqlite database** in order to save the forecast data).
 
 
 ## Additional informations for practical use #
@@ -24,7 +24,7 @@ If parsing a website and interested about weather forecast for other locations, 
 
 IF possible include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program and save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim program for the newly retrieved locations. 
 
-The idea with using already known weather stations with free access data is to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break. The Norwegian Meteorological Institute is known to use trustful algorithm to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. 
+The idea with using already known weather stations with free access data is to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break. The [Norwegian Meteorological Institute](https://www.yr.no/en) is known to use trustful algorithms to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. 
 
 ## Visualization #
 

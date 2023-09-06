@@ -18,13 +18,19 @@ This set of programs could be used to predict weather anywhere on the planet and
 
 ## Additional informations for practical use #
 
+### Simple workflow without storing the data in a SQLite3 database ###
+
 If you would like to test this program (and to understand my thought process), then I would recommend to first use the Nominatim search API in order to retrieve the lat and long for an address that interests you. Then I would go on and use the yrno.py unmodified simple program to predict the weather for this location: user is prompted for lat and long and then provided with an output as a json file for this location.
+
+### Add your own locations of interest ###
 
 If parsing a website and interested about weather forecast for other locations, don't hesitate to contribute and create another parser program. 
 
-IF possible include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program and save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim program for the newly retrieved locations. 
+Include the latitude and longitude of the parsed location as demonstrated in the acinn_parser.py program in order to save these in the weatherstations.sqlite database. If only the names or the addresses could be found, then that would be an opportunity to use the Nominatim program in combination with the parser for the newly retrieved locations. 
 
-The idea with using already known weather stations with free access data is to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break. The [Norwegian Meteorological Institute](https://www.yr.no/en) is known to use trustful algorithms to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. [Open street map](https://www.openstreetmap.org/) has a set of different APIs that are available and can be modified as well, in order to find more information about retrieved locations and to make them compatible with the LocationForecast API of the Norwegian Meteorological Institute. 
+### More informations to help you choose locations with the particular combination of APIs ###
+
+The idea with using already known weather stations with free access data could be to compare the forecast (prediction) versus the reality (record). Also, sometimes it may allow for interpolation if weather instruments break. The [Norwegian Meteorological Institute](https://www.yr.no/en) is known to use trustful algorithms to predict weather and the LocationForecast API that was used is free to use and uses my Coursera profile as user-agent of the request. [Open street map](https://www.openstreetmap.org/) has a set of different APIs that are available and can be modified as well, in order to find more information about retrieved locations and to make them compatible with the LocationForecast API of the Norwegian Meteorological Institute (which uses lat long). 
 
 ## Visualization #
 

@@ -1,6 +1,6 @@
 # Weather Forecast Anywhere using SQLite3 database #
 
-This is the repository for my final project of [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
+This is the repository for my final project of the [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
 
 This set of programs could be used to predict weather anywhere on the planet and save this forecast for analysis and visualization (here using the D3.js JavaScript library), much like a weather station would do. 
 

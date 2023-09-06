@@ -2,7 +2,7 @@
 
 This is the repository for my final project of [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
 
-This set of programs could be used to predict weather anywhere on the planet and save this forecast for analysis and visualization, much like a weather station would do. 
+This set of programs could be used to predict weather anywhere on the planet and save this forecast for analysis and visualization (here using the d3 JavaScript library), much like a weather station would do. 
 
 ## Folder structure #
 

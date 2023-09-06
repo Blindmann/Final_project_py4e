@@ -1,4 +1,4 @@
-# Weather Forecast Anywhere using SQLite3 database for Visualization #
+# Weather Forecast Anywhere using SQLite3 database #
 
 This is the repository for my final project of [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
 

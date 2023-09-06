@@ -17,7 +17,7 @@ This set of programs could be used to predict weather anywhere on the planet and
     1) used the **first** _acinn_parser.py_ program in order to parse the [website of the department of Atmospheric and Cryospheric Sciences](https://acinn-data.uibk.ac.at/) at the University of Innsbruck. That way, I could retrieve data about several weather stations accessible at different webpages from the source url. For the pages that were formatted in the same way, I could retrieve (for Europe) the latitude and longitude of each weather station (open source data).
     2) used the **second** program _yrno_modified.py_ in order to use these retrieved latitude longitude values for each weather stations and to predict the weather at these locations (using the [LocationForecast API](https://developer.yr.no/doc/locationforecast/HowTO/)).
 
-  > _Both the parser and the yrno_modified.py program use the same **_SQLite3 database_** that they contribute on building (the yrno_modified.py program adds a table to the **weatherstations.sqlite database** in order to save the forecast data)._
+  > _Both the original parser and the yrno_modified.py program use the same **_SQLite3 database_** that they contribute on building (the yrno_modified.py program adds a table to the **weatherstations.sqlite database** in order to save the forecast data)._
 
 
 ## Additional informations for practical use #

@@ -1,4 +1,4 @@
-# Final project py4e: Python for Everybody (Capstone)
+# Weather Forecast Anywhere using SQLite3 database for Visualization #
 
 This is the repository for my final project of [Python 4 Everybody](https://www.coursera.org/learn/python-data-visualization) course on Coursera (Capstone).
 
@@ -35,8 +35,6 @@ This set of programs could be used to predict weather anywhere on the planet and
 
 ## Visualization #
 
-Here analysis and visualizations provided are simple and use the program gline.js inspired by the Python for Everybody specialization taught by Dr. Chuck Charles Severance on Coursera. The latest version of the **gline2.py** provided a visualization of the average temperature per timestep and through time (the timeframe of the forecast) at all the weather stations in Austria. Don't forget to use the gline.htm after running the gline program to open a window in the browser and visualize the data!
-
-![](file:///C:/Users/msi/Desktop/py4e/05_Capstone/Final_project/Yr_no/gline.htm)
+Here analysis and visualizations provided are simple and use the program gline.js inspired by the Python for Everybody specialization taught by [Dr. Chuck Charles Severance](https://online.dr-chuck.com/) on Coursera. The latest version of the **gline2.py** provided a visualization of the average temperature per timestep and through time (the timeframe of the forecast) at all the weather stations in Austria. Don't forget to use the gline.htm after running the gline program to open a window in the browser and visualize the data!
 
 It is possible to change this program to view the precipitations instead or to trace a separate curve for each weather station in order to compare the weather at different locations for the same time period.
